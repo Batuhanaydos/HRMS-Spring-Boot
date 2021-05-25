@@ -6,8 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
 @Entity
 @Table(name="jobPositions")
+@AllArgsConstructor
+@NoArgsConstructor
 public class JobPositions {
 		
 		@Id
@@ -21,39 +28,4 @@ public class JobPositions {
 		@Column(name="offDayInOneYear")
 		private int offDayInOneYear;
 		
-		public JobPositions() {
-		}
-		public JobPositions(int id, String department, double salary, int offDayInOneYear) {
-			super();
-			this.id = id;
-			this.department = department;
-			this.salary = salary;
-			this.offDayInOneYear = offDayInOneYear;
-		}
-		public int getId() {
-			return id;
-		}
-		public void setId(int id) {
-			this.id = id;
-		}
-		public String getDepartment() {
-			return department;
-		}
-		public void setDepartment(String department) {
-			this.department = department;
-		}
-		public double getSalary() {
-			return salary;
-		}
-		public void setSalary(double salary) {
-			this.salary = salary;
-		}
-		public int getOffDayInOneYear() {
-			return offDayInOneYear;
-		}
-		public void setOffDayInOneYear(int offDayInOneYear) {
-			this.offDayInOneYear = offDayInOneYear;
-		}
-		
 }
-
