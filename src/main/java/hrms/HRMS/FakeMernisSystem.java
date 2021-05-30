@@ -1,6 +1,9 @@
 package hrms.HRMS;
 import java.time.LocalDate;
 
+import hrms.HRMS.core.utilities.results.DataResult;
+import hrms.HRMS.entities.concretes.Jobseeker;
+
 public class FakeMernisSystem {
 	
 		public boolean userValidationWithMernis(String firstName, String lastName, String nationalId, LocalDate birthOfDate) {
@@ -14,5 +17,9 @@ public class FakeMernisSystem {
 				System.out.println("User validation: ERROR. " + firstName + " " + lastName);
 			}
 			return result;
+		}
+
+		public static DataResult<Jobseeker> Validate(Jobseeker entity) {
+			return null;
 		}
 	}
